@@ -1,0 +1,20 @@
+{
+  "name": "typescript-gamedev",
+  "version": "1.0.0",
+  "description": "This repo exists as a playground for my nephew Arthur and I.  No serious code allowed!  The primary purpose of this repo is to explore and learn software development through typescript game development.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch & live-server --port=8085"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "phaser": "^3.16.2",
+    "ts-loader": "^5.4.5",
+    "typescript": "^3.4.5",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}
