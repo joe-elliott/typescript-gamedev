@@ -1,11 +1,15 @@
 import "phaser";
+import { LEFT } from "phaser";
 
 export class GameScene extends Phaser.Scene {
 
-    simonText: Phaser.GameObjects.Text;
-    gretaText: Phaser.GameObjects.Text;
-    prevTime: number
-    rectangle: Phaser.GameObjects.Rectangle;
+    prevTime: number;
+    character: Phaser.GameObjects.Arc;
+
+    leftKey: Phaser.Input.Keyboard.Key;
+    rightKey: Phaser.Input.Keyboard.Key;
+    upKey: Phaser.Input.Keyboard.Key;
+    downKey: Phaser.Input.Keyboard.Key;
 
     constructor() {
         super({
@@ -22,37 +26,34 @@ export class GameScene extends Phaser.Scene {
     }
 
     create(): void {
-        this.simonText = this.add.text(10, 10, '',
-            { font: '24px Bold', fill: '#ffbb45' });
-        this.gretaText = this.add.text(10, 10, '',
-            { font: '24px Bold', fill: '#ff6145' });
+        this.character = this.add.circle(0, 0, 10, 0xee3322)
 
-        this.rectangle = this.add.rectangle(300, 300, 200, 200, 0xffcc00)
-
-        this.simonText.text = "Simon";
-        this.gretaText.text = "Greta";    
+        this.leftKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT)
+        this.rightKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT)
+        this.upKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP)
+        this.downKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN)
     }
-
+    
     update(time): void {
         var delta = time - this.prevTime
 
-        if(this.game.input.activePointer.leftButtonDown()) {
-            this.simonText.originX = Math.random() * -14
-            this.simonText.originY = Math.random() * -20
-
-            this.gretaText.originX = Math.random() * -14
-            this.gretaText.originY = Math.random() * -20
-        } else {
-            this.gretaText.originX += delta * .01;
-            this.gretaText.originY += delta * .01;
-
-            this.simonText.originX += delta * .01;
-            this.simonText.originY += delta * .01;
+        if(this.leftKey.isDown) {
+            this.character.x -= 10
         }
 
-        this.simonText.updateDisplayOrigin()
-        this.gretaText.updateDisplayOrigin()
-        this.rectangle.updateDisplayOrigin()
+        if(this.rightKey.isDown) {
+            this.character.x += 10
+        }
+
+        if(this.upKey.isDown) {
+            this.character.y -= 10
+        }
+
+        if(this.downKey.isDown) {
+            this.character.y += 10
+        }
+
+        this.character.updateDisplayOrigin()
 
         this.prevTime = time
     }
