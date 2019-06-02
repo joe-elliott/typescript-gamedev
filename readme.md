@@ -5,3 +5,14 @@ This repo exists as a playground for my nephew Arthur and I.  No serious code al
 We will be starting with this demo:
 
 https://medium.freecodecamp.org/how-to-build-a-simple-game-in-the-browser-with-phaser-3-and-typescript-bdc94719135
+
+# notes for Arthur
+
+- In VSCode hit Ctrl+` that will open your terminal
+- Type 'npm run start' and hit enter
+- Make changes and hit Mac+s to save and reload
+
+### to get latest
+
+- To get rid of your local changes `git checkout -- .`
+- To pull latest changes `git pull`
