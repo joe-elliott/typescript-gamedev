@@ -8,7 +8,7 @@ const config: GameConfig = {
   height: 600,
   parent: "game",
   backgroundColor: "#225277",
-  scene: [DataTypesScene],
+  scene: [GameScene],
   physics: {
     default: "arcade",
     arcade: {
