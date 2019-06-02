@@ -26,6 +26,13 @@ export class GameScene extends Phaser.Scene {
     }
 
     create(): void {
+        /*
+          Homework #1: 
+          1)  Declare a variable and assign it the value 0xee3322.  Use it in place of the static value in the circle function below.
+              Hint:  0xee3322 is a hexadecimal number
+          2)  Through experimentation we learned that 0xee3322 represents a color.  Research and report on how.
+        */
+
         this.character = this.add.circle(0, 0, 10, 0xee3322)
 
         this.leftKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT)
