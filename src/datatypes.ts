@@ -29,6 +29,9 @@ export class DataTypesScene extends Phaser.Scene {
         let name : string = "joe elliott";
 
         /* array */
+        /*
+           a homogenuous collection of data accessible by index
+        */
         let textToDraw : string[] = ["typescript", "game", "dev"];
 
         if(addCircle) {
