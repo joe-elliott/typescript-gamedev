@@ -1,3 +1,10 @@
+/*
+ This is a multiline comment.
+ I can easily type multiple lines.
+*/
+
+// This is a single line comment
+
 import "phaser";
 import { GameScene } from "./scene";
 import { DataTypesScene } from "./datatypes";
