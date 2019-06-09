@@ -8,6 +8,7 @@
 import "phaser";
 import { GameScene } from "./scene";
 import { DataTypesScene } from "./datatypes";
+import { OperatorsScene } from "./operators";
 
 const config: GameConfig = {
   title: "game",
@@ -15,7 +16,7 @@ const config: GameConfig = {
   height: 600,
   parent: "game",
   backgroundColor: "#225277",
-  scene: [GameScene],
+  scene: [OperatorsScene],
   physics: {
     default: "arcade",
     arcade: {
