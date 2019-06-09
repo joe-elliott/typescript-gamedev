@@ -37,10 +37,10 @@ export class GameScene extends Phaser.Scene {
 
         /*
           Homework #2: 
-          1)  Declare variables for x, y and radius.  Assign them values and use them in the this.add.circle() method below.
-          2)  
+          1) Declare variables for x, y and radius.  Assign them values and use them in the this.add.circle() method below.
+          2) Have fun and make the circle big, small and many crazy colors.
+          3) Read about De Morgan's Law and write some simple code that shows it.  De Morgan's Law is related to the boolean operators we learned about today.
         */
-
         this.character = this.add.circle(0, 0, 10, characterColor)
 
         this.leftKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT)
